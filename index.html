@@ -31,7 +31,7 @@
     function updateImageBasedOnTime() {
         const image = document.getElementById("timeImage");
         try {
-          const hour = 999 //new Date().getHours();
+          const hour = new Date().getHours();
           if (hour >= 6 && hour < 12) {
               image.src = "morning.jpg";
               image.alt = "Morning Image";
