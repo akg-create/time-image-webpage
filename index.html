@@ -25,7 +25,7 @@
   <h3> Major: Computer Science</h3>
   <p>Hello! Welcome to my time-based webpage. The image below will change based on the time of day (morning, afternoon, or evening).</p>
 
-  <img id="timeImage" src="" alt="Time of day image">
+  <img id="timeImage" src="fallback.jpg" alt="Time of day image" onerror="this.src='fallback.jpg'; this.alt='Fallback Image';">
 
   <script>
     function updateImageBasedOnTime() {
