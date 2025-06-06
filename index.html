@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TIME BASED IMAGE DISPLAY</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 2rem;
+        background-color: #f0f0f0;
+    }
+    img {
+        width: 80%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px; 
+        margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1> Abbie Grooms</h1>
+  <h2> Course: Web Applications Programming</h2>
+  <h3> Major: Computer Science</h3>
+  <p>Hello! Welcome to my time-based webpage. The image below will change based on the time of day (morning, afternoon, or evening).</p>
+
+  <img id="timeImage" src="" alt="Time of day image">
+
+  <script>
+    function updateImageBasedOnTime() {
+        const hour = new Date().getHours();
+        const image = document.getElementById("timeImage");
+
+        if (hour >= 6 && hour < 12) {
+            image.src = "https://images.unsplash.com/photo-1505483531331-37d92a3fd0d4?auto=format&fit=crop&w=800&q=80";
+            image.alt = "Morning Image";
+        } else if (hour >= 12 && hour < 18) {
+            image.src = "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80";
+            image.alt = "Afternoon Image; 
+        } else {
+            image.src = ps://images.unsplash.com/photo-1502209524165-68c6b63b1d92?auto=format&fit=crop&w=800&q=80";
+            image.alt = "Evening Image";
+        }
+    }
+
+    // Run function on page load 
+    updateImageBasedOnTime();
+  </script>
+</body>
+</html>
