@@ -33,13 +33,13 @@
         const image = document.getElementById("timeImage");
 
         if (hour >= 6 && hour < 12) {
-            image.src = "https://cdn.pixabay.com/photo/2015/09/18/20/21/sunrise-944390_1280.jpg";
+            image.src = "morning.jpg";
             image.alt = "Morning Image";
         } else if (hour >= 12 && hour < 18) {
-            image.src = "https://cdn.pixabay.com/photo/2016/03/27/21/16/sunset-1283872_1280.jpg";
+            image.src = "afternoon.jpg";
             image.alt = "Afternoon Image"; 
         } else {
-            image.src = "https://cdn.pixabay.com/photo/2014/12/16/22/25/night-570881_1280.jpg";
+            image.src = "evening.jpg";
             image.alt = "Evening Image";
         }
     }
