@@ -29,19 +29,26 @@
 
   <script>
     function updateImageBasedOnTime() {
-        const hour = new Date().getHours();
         const image = document.getElementById("timeImage");
-
-        if (hour >= 6 && hour < 12) {
-            image.src = "morning.jpg";
-            image.alt = "Morning Image";
-        } else if (hour >= 12 && hour < 18) {
-            image.src = "afternoon.jpg";
-            image.alt = "Afternoon Image"; 
-        } else {
-            image.src = "evening.jpg";
-            image.alt = "Evening Image";
+        try {
+          const hour = new Date().getHours();
+          if (hour >= 6 && hour < 12) {
+              image.src = "morning.jpg";
+              image.alt = "Morning Image";
+          } else if (hour >= 12 && hour < 18) {
+              image.src = "afternoon.jpg";
+              image.alt = "Afternoon Image"; 
+          } else if ((hour >= 18 && hour <= 23) || (hour >= 0 && hour < 6)) {
+              image.src = "night.jpg";
+              image.alt = "Evening Image";
+          } else {
+              image.src = "fallback.jpg";
+              image.alt = "Fallback Image";
+        }catch (error) {
+          image.src = "fallback.jpg";
+          image.alt = "Fallback Image";
         }
+       
     }
 
     // Run function on page load 
