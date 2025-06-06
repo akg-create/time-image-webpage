@@ -1,4 +1,4 @@
-# time-image-webpage
+# time-image-webpage- Abbie Grooms
 
 Overview: 
   This webpage uses HTML and JavaScript to display different images based on the time of day. 
